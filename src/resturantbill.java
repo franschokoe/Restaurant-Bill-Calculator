@@ -59,6 +59,7 @@ public class resturantbill {
         String divider = "__________________________________________";
         String thinDiv = "------------------------------------------";
 
+        //OUTPUT
         System.out.println();
         System.out.println(divider);
         System.out.println("RESTAURANT BILL RECEIPT");
