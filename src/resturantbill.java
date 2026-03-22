@@ -21,5 +21,31 @@ public class resturantbill {
         } while (serverRating < 1 || serverRating > 5);
 
         scanner.close();
+
+        double tipPercent;
+        String ratingLabel;
+
+        //deciding
+        if (serverRating == 1 ){
+            tipPercent  = 0.05;
+            ratingLabel = "Poor (5%)";
+        }
+        else if (serverRating == 2){
+            tipPercent  = 0.10;
+            ratingLabel = "Below Average (10%)";
+        }
+        else if (serverRating == 3){
+            tipPercent  = 0.15;
+            ratingLabel = "Average (15%)";
+        }
+        else if (serverRating == 4){
+            tipPercent  = 0.18;
+            ratingLabel = "Good (18%)";
+        }
+        else{
+            //for 5 and more
+            tipPercent  = 0.20;
+            ratingLabel = "Excellent (20%)";
+        }
     }
 }
