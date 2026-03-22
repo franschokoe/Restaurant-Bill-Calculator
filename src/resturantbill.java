@@ -47,5 +47,34 @@ public class resturantbill {
             tipPercent  = 0.20;
             ratingLabel = "Excellent (20%)";
         }
+        //calculation
+
+        final double TAX_RATE = 0.085;          // 8.5%
+
+        double taxAmount    = mealCost * TAX_RATE;
+        double tipAmount    = mealCost * tipPercent;
+        double totalBill    = mealCost + taxAmount + tipAmount;
+        double costPerPerson = totalBill / numPeople;
+
+        String divider = "__________________________________________";
+        String thinDiv = "------------------------------------------";
+
+        System.out.println();
+        System.out.println(divider);
+        System.out.println("RESTAURANT BILL RECEIPT");
+        System.out.println(divider);
+        System.out.printf("  %-28s%s%n", "Server Rating:", ratingLabel);
+        System.out.printf("  %-28s%d%n", "Party Size:", numPeople);
+        System.out.println(thinDiv);
+        System.out.printf("  %-28sR%8.2f%n", "Meal Cost:",   mealCost);
+        System.out.printf("  %-28sR%8.2f%n", "Tax (8.5%):",  taxAmount);
+        System.out.printf("  %-28sR%8.2f%n", "Tip:",         tipAmount);
+        System.out.println(thinDiv);
+        System.out.printf("  %-28sR%8.2f%n", "TOTAL BILL:",  totalBill);
+        System.out.println(thinDiv);
+        System.out.printf("  %-28sR%8.2f%n", "Cost Per Person:", costPerPerson);
+        System.out.println(divider);
+        System.out.println("Thank you for dining with us!😊😊");
+        System.out.println(divider);
     }
 }
